@@ -3,12 +3,12 @@ import movieRouter from "../routes/movies.js";
 import aboutRouter from "../routes/about.js";
 import bookingRouter from "../routes/booking.js";
 import apiRouter from "../routes/api.js";
-import loginRouter from "../routes/login.js";
+import createAccountRouter from "../routes/createaccount.js";
 
 
 const app = express();
 
-app.set("view engine", "ejs");
+app.set("view engine", "ejs", 'html');
 app.use(express.static("public"));
 app.use(express.json());
 app.get("/", (req, res) => {
@@ -18,6 +18,6 @@ app.use('/api', apiRouter);
 app.use("/movies", movieRouter);
 app.use("/about", aboutRouter);
 app.use("/booking", bookingRouter);
-app.use('/login', loginRouter);
+app.use('/createaccount', createAccountRouter);
 
 export default app;
