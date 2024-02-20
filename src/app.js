@@ -13,6 +13,11 @@ app.use(express.json());
 app.get("/", (req, res) => {
     res.render("index");
 });
+
+app.get("/signup", (req, res) => {
+    res.render("signup");
+});
+
 app.use('/api', apiRouter);
 app.use("/movies", movieRouter);
 app.use("/about", aboutRouter);

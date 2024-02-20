@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html>
 
-<%- include('./partials/head') %>
+
+    <%- include('./partials/head') %>
 
     <body>
-        <main class="grid-20-1fr min-h-full w-full bg-primary absolute">
+        
+        <main class="grid-20-1fr min-h-full w-full bg-primary">
+            
             <%- include('./partials/sidebar', { active: '/' }) %>
-                <section>
-                    <div class="flex flex-col items-center text-center justify-center h-full">
+            <section>
+                <div class="flex flex-col items-center text-center justify-center h-full">
+                        <div class="flex justify-end p-12">
+                            <a href="/signup" class="px-6 py-2 text-lg text-white bg-blue-500 rounded hover:bg-blue-700 transition duration-300" style="margin-bottom: 5rem;">Skapa konto</a>
+                            <a href="/login" class="px-6 py-2 text-lg text-white bg-green-500 rounded hover:bg-green-700 transition duration-300" style="margin-bottom: 5rem; margin-left: 10rem;">Logga in</a>
+                        </div>
                         <h1 class="text-6xl font-bold text-white">Välkommen till Bihjografen</h1>
                         <p class="text-2xl text-white w-2/3 py-4">Lorem ipsum dolor sit amet consectetur adipisicing
                             elit.
