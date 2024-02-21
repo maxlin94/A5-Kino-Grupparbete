@@ -14,14 +14,14 @@ class PassWordValidation {
         const passwordStrengthText = this.getPwStrengthText();
 
         if(passwordInput.length < 5){
-            passwordStrengthText.innerText='svagt';
+            passwordStrengthText.innerText='Svagt';
         
         }
         else if(passwordInput.length > 10){
-            passwordStrengthText.innerText='starkt'
+            passwordStrengthText.innerText='Starkt'
         }
         else {
-            passwordStrengthText.innerText = 'Måttligt';
+            passwordStrengthText.innerText = 'Lagom';
         }
         
     }
@@ -29,7 +29,7 @@ class PassWordValidation {
         validationInput(){
         const pwInput = this.getPwInput();
         pwInput.addEventListener('input',()=>{
-            this.pwPower();
+        this.pwPower();
         });
     }
    
