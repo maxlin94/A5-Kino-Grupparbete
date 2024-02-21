@@ -1,5 +1,5 @@
-const passwordInput = document.getElementById('password');
-const passwordStrengthText = document.getElementById('passwordStrength');
+const passwordInput = document.querySelector('#password');
+const passwordStrengthText = document.querySelector('#passwordStrength');
 
 passwordInput.addEventListener('input', () => {
     const strength = checkPasswordStrength(passwordInput.value);
