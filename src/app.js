@@ -18,6 +18,10 @@ app.get("/signup", (req, res) => {
     res.render("signup");
 });
 
+app.get("/login", (req, res) => {
+    res.render("login");
+});
+
 app.use('/api', apiRouter);
 app.use("/movies", movieRouter);
 app.use("/about", aboutRouter);
