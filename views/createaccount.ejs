@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <script src="../createaccount.js" type="module" defer></script>
+    </head>
     <%- include('./partials/head') %>
 
-</head>
+
 
   <body>
     <main class="grid-20-1fr min-h-full w-full bg-primary absolute flex"> 
@@ -11,22 +14,24 @@
       <section class="flex justify-start items-center flex-col bg-secondary rounded  h-3/5 w-3/6 justify-self-center self-center gap-10">
          <div class="justify-self-start" >
         <h1 class="text-6xl font-bold text-white">Bli medlem idag!</h1>
-        <ul class="justify-self-end">
-          <li class="text-1xl text-white">Få rabatter</li>
-          <li class="text-1xl text-white">Sneak peeks på kommande filmer</li>
-          <li class="text-1xl text-white">Privata samtal från skådespelare (från Hjo)</li>
-          <li class="text-1xl text-white">Backstagepass till Grammisgalan (i Hjo).</li>
+        <ul class="justify-self-end ">
+          <li class="text-1xl text-white "><i class="far fa-check-circle mr-1.5"></i>Få rabatter</li>
+          <li class="text-1xl text-white"><i class="far fa-check-circle mr-1.5"></i>Sneak peeks på kommande filmer</li>
+          <li class="text-1xl text-white"><i class="far fa-check-circle mr-1.5"></i>Privata samtal från skådespelare (från Hjo)</li>
+          <li class="text-1xl text-white"><i class="far fa-check-circle mr-1.5"></i>Backstagepass till Grammisgalan (i Hjo).</li>
         </ul>
        </div>
         <form action="" method="get" class="border-2 rounded-lg py-5" id="userForm">
           <div class=" flex flex-col gap-5 mx-3">
-            <input type="text" name="userName" id="createUserNameAcc" placeholder="Användarnamn" required/>
-            <input type="text" name="firstname" id="firstNameAcc" placeholder="Ditt förnamn" required/>
+            <input type="text" name="userName" id="createUserNameAcc" placeholder="Användarnamn*" required/>
+            <input type="text" name="firstname" id="firstNameAcc" placeholder="Ditt förnamn*" required/>
 
-            <input type="text" name="lastname" id="lastNameAcc" placeholder="Ditt efternamn" required/>
+            <input type="text" name="lastname" id="lastNameAcc" placeholder="Ditt efternamn*" required/>
           
-            <input type="email" name="email" id="emailAcc" placeholder="Din email" required/>
-              <input type="password" name="password" id="createPasswordAcc" placeholder="Ditt lösenord" required/>
+            <input type="email" name="email" id="emailAcc" placeholder="Din email*" required/>
+              <input type="password" name="password" id="createPasswordAcc" placeholder="Ditt lösenord*" required/>
+
+              <strong class="text-white" >Lösenordets styrka: <strong id="pwPower"> </strong></strong>
             
             <div class="self-center bg-blue-300 w-48 pl-10"> 
             <input type="submit" value="Bli medlem nu!" class="">
@@ -35,7 +40,9 @@
           </div>
         </form>
       </section>
-    
+   
     </main>
+     
   </body>
+  
 </html>
