@@ -14,10 +14,13 @@
 <body class="bg-body">
     <main class="grid-20-1fr gap-y-8 min-h-full w-full bg-primary absolute">
         <%- include('./partials/sidebar', { active: '/movies' }) %>
+        <section>
+        <h1 class="text-white text-center text-4xl font-bold mt-16">Alla filmer</h1>
             <section class="grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 row-auto p-8">
                 <%- include('./partials/getMovies', { hrefText: 'Mer info' , href: `/movies/`, showIntro: false,
                     showReviews: false, showScreenings: false }) %>
             </section>
+        </section>
     </main>
 </body>
 
