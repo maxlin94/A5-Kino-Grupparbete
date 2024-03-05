@@ -20,7 +20,7 @@ body {
 .active ::before,
 .active ::after {
   --border-radius: 2rem;
-  content: '';
+  content: "";
   position: absolute;
   width: var(--border-radius);
   height: var(--border-radius);
@@ -45,23 +45,26 @@ body {
   grid-template-columns: 20rem 1fr;
 }
 
-
-.reviewsListHeight{
-    height: 425px;
+.reviewsListHeight {
+  height: 425px;
 }
 
-.reviewItem{
-    animation: growIn 0.05s ease-in forwards;
+.reviewItem {
+  animation: growIn 0.05s ease-in forwards;
 }
 
-@keyframes growIn{
-    0%{opacity: 0;
-    scale: 95%;}
-    100%{opacity: 1;
-    scale: 100%;}
+@keyframes growIn {
+  0% {
+    opacity: 0;
+    scale: 95%;
+  }
+  100% {
+    opacity: 1;
+    scale: 100%;
+  }
 }
 
-.review-rating input[type='radio'] {
+.review-rating input[type="radio"] {
   display: none;
 }
 
@@ -71,9 +74,8 @@ body {
   cursor: pointer;
 }
 
-.review-rating input[type='radio']:checked + label,
-.review-rating input[type='radio']:hover + label,
-.review-rating input[type='radio']:checked:hover + label {
+.review-rating input[type="radio"]:checked + label,
+.review-rating input[type="radio"]:hover + label,
+.review-rating input[type="radio"]:checked:hover + label {
   color: #ffcc00;
 }
-

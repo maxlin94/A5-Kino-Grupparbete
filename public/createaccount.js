@@ -1,38 +1,58 @@
 class PassWordValidation {
-    constructor(){
+  constructor() {
+    this.setupSubmitListener();
+  }
+  getPwStrengthText() {
+    return document.querySelector("#pwPower");
+  }
+  getPwInput() {
+    return document.querySelector("#createPasswordAcc");
+  }
 
-    }
-    getPwStrengthText(){
-         return document.querySelector('#pwPower');
-    }
-    getPwInput(){
-    return document.querySelector('#createPasswordAcc');
-    }
+  getSubmitBtn() {
+    const submitBtn = document.querySelector("#submitBtn");
+    submitBtn.style.display = "none";
+    return submitBtn;
+  }
+  pwPower() {
+    const passwordInput = this.getPwInput().value;
+    const passwordStrengthText = this.getPwStrengthText();
+    const regularExpression = /[|#\(\)\[\]{}<>=:;"'&!\-@]/;
 
-    pwPower(){
-        const passwordInput = this.getPwInput().value;
-        const passwordStrengthText = this.getPwStrengthText();
-
-        if(passwordInput.length < 5){
-            passwordStrengthText.innerText='Svagt';
-        
-        }
-        else if(passwordInput.length > 10){
-            passwordStrengthText.innerText='Starkt'
-        }
-        else {
-            passwordStrengthText.innerText = 'Lagom';
-        }
-        
+    if (passwordInput.length < 8) {
+      passwordStrengthText.innerText = "Ej godkänt";
+      passwordStrengthText.style.color = "red";
+      submitBtn.style.display = "none";
+    } else if (
+      passwordInput.match(regularExpression) &&
+      passwordInput.length >= 8
+    ) {
+      passwordStrengthText.innerText = "Godkänt";
+      passwordStrengthText.style.color = "green";
+      submitBtn.style.display = "block";
     }
+  }
 
-        validationInput(){
-        const pwInput = this.getPwInput();
-        pwInput.addEventListener('input',()=>{
-        this.pwPower();
-        });
-    }
-   
+  setupSubmitListener() {
+    this.getSubmitBtn().addEventListener("click", (event) => {
+      const passwordInput = this.getPwInput().value;
+      const passwordStrengthText = this.getPwStrengthText();
+      const regularExpression = /[|#\(\)\[\]{}<>=:;"'&!\-@]/;
+
+      if (passwordInput.length > 8 && passwordInput.match(regularExpression)) {
+      } else if (!passwordInput.match(regularExpression)) {
+        passwordStrengthText.innerText = "Något fattas";
+        passwordStrengthText.style.color = "orange";
+      }
+    });
+  }
+
+  validationInput() {
+    const pwInput = this.getPwInput();
+    pwInput.addEventListener("input", () => {
+      this.pwPower();
+    });
+  }
 }
 
 const validator = new PassWordValidation();
