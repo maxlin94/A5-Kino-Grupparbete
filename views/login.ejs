@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<%- include('./partials/head') %>
+
+<body class="bg-body">
+    <main class="grid-20-1fr min-h-full w-full bg-primary absolute">
+        <%- include('./partials/sidebar', { active: '/login' }) %>
+            <section class="flex flex-col justify-center items-center">
+                <div>
+                    <h1 class="text-white text-4xl pb-8">Logga in</h1>
+                    <div class="pb-2">
+                      <label class="text-white grid gap-1" for="username">Användarnamn:</label>
+                      <input type="text" id="username" name="username" required />
+                    </div>
+                    <div class="pb-2">
+                      <label class="text-white grid gap-1" for="password">Lösenord:</label>
+                      <input type="text" id="password" name="password" required />
+                    </div>
+                    <div class="pt-4">
+                        <button class="bg-secondary hover:bg-slate-500 text-white font-bold py-2 px-4 rounded" type="button">
+                            Logga in
+                          </button>
+                      </div>
+                <div>
+            </section>
+    </main>
+</body>
+
+</html>

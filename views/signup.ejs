@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <%- include('./partials/head') %>
+
+  <body class="bg-body">
+    <main class="grid-20-1fr min-h-full w-full bg-primary absolute">
+      <%- include('./partials/sidebar', { active: '/signup' }) %>
+      <section class="flex flex-col justify-center items-center">
+        <div>
+          <h1 class="text-white text-4xl pb-6">Skapa konto</h1>
+          <div class="pb-2">
+            <label class="text-white grid gap-1" for="firstname">Förnamn:</label>
+            <input type="text" id="firstname" name="firstname" required />
+          </div>
+          <div class="pb-2">
+            <label class="text-white grid gap-1" for="surname">Efternamn:</label>
+            <input type="text" id="surname" name="surname" required />
+          </div>
+          <div class="pb-2">
+            <label class="text-white grid gap-1" for="username">Användarnamn:</label>
+            <input type="text" name="username" id="username" required />
+          </div>
+          <div class="pb-2">
+            <label class="text-white grid gap-1" for="email">E-postadress:</label>
+            <input type="text" name="email" id="email" required />
+          </div>
+          <div class="pb-2">
+            <label class="text-white grid gap-1" for="password">Lösenord:</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <div class="pt-4">
+            <button class="bg-secondary hover:bg-slate-500 text-white font-bold py-2 px-4 rounded" type="button">
+                Skapa konto
+              </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
