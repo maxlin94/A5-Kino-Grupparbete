@@ -79,3 +79,7 @@ body {
 .review-rating input[type="radio"]:checked:hover + label {
   color: #ffcc00;
 }
+
+.minHeight {
+  min-width: 40rem;
+}

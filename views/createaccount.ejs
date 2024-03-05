@@ -10,11 +10,11 @@
       <%- include('./partials/sidebar', { active: '/login' }) %>
 
       <section
-        class="flex justify-start items-center flex-col bg-secondary rounded min-h-94 min-w-32 justify-self-center self-center gap-10"
+        class="flex items-center flex-col bg-secondary rounded gap-10 h-4/5 mt-16 w-96 self-center justify-center justify-self-center"
       >
-        <h1 class="text-6xl font-bold text-white m-16">Bli medlem idag!</h1>
+        <h1 class="text-6xl font-bold text-white">Bli medlem idag!</h1>
 
-        <ul class="ml-18">
+        <ul class="ml-18 mt-18">
           <li class="text-1xl text-white">
             <i class="far fa-check-circle mr-1.5"></i>Få rabatter
           </li>
@@ -35,10 +35,13 @@
         <form
           action="www.fakeurl.com"
           method="post"
-          class="border-2 rounded-lg py-5 w-72 mb-12"
+          class="border-2 rounded-lg py-5 w-72"
           id="userForm"
         >
-          <div class="flex flex-col gap-5 mx-3">
+          <div class="flex flex-col gap-1 mx-3 p-3">
+            <label for="createUserNameAcc" class="text-white"
+              >Användarnamn</label
+            >
             <input
               type="text"
               name="userName"
@@ -46,6 +49,7 @@
               placeholder="Användarnamn*"
               required
             />
+            <label for="firstNameAcc" class="text-white">Föramn</label>
             <input
               type="text"
               name="firstname"
@@ -53,7 +57,7 @@
               placeholder="Ditt förnamn*"
               required
             />
-
+            <label for="lastNameAcc" class="text-white">Efternamn</label>
             <input
               type="text"
               name="lastname"
@@ -61,7 +65,7 @@
               placeholder="Ditt efternamn*"
               required
             />
-
+            <label for="createPasswordAcc" class="text-white">Lösenord</label>
             <input
               type="email"
               name="email"
@@ -69,6 +73,7 @@
               placeholder="Din email*"
               required
             />
+            <label for="createPasswordAcc" class="text-white">Lösenord</label>
             <input
               type="password"
               name="password"

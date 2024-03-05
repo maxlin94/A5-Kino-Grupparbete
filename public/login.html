@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <main class="min-h-full w-full bg-primary flex">
+    <main class="grid-20-1fr min-h-full w-full bg-primary absolute flex">
       <aside class="bg-secondary sticky top-0 max-h-screen">
         <img
           class="p-4 mb-10"
@@ -37,33 +37,36 @@
       </aside>
 
       <section
-        class="flex items-center flex-col bg-secondary rounded h-96 w-96 gap-10 ml-96 self-center"
+        class="flex items-center flex-col bg-secondary rounded gap-10 h-3/5 mt-16 w-96 self-center justify-center justify-self-center"
       >
         <h1 class="text-6xl font-bold text-white m-2">Logga in</h1>
         <form
           action="www.fakeurl.com"
           method="post"
-          class="border-2 rounded-lg py-5"
-          id="userForm"
+          class="border-2 rounded-lg py-5 h-3/5"
+          id="userFormLogin"
         >
-          <div class="flex flex-col gap-5 mx-3">
+          <div class="flex flex-col gap-1 mx-3 p-3">
+            <label for="userNameAccLogin" class="text-white"
+              >Användarnamn</label
+            >
             <input
               type="text"
               name="userName"
-              id="userNameAcc"
-              placeholder="Användarnamn"
+              id="userNameAccLogin"
+              placeholder="Användarnamn*"
               required
             />
-
+            <label for="passwordAcc" class="text-white">Lösenord</label>
             <input
               type="password"
               name="password"
               id="passwordAcc"
-              placeholder="Ditt lösenord"
+              placeholder="Ditt lösenord*"
               required
             />
 
-            <div class="bg-blue-300 w-48 pl-12">
+            <div class="bg-blue-300 w-48 pl-12 mt-4">
               <input
                 type="submit"
                 value="Logga in"
@@ -71,7 +74,7 @@
               />
             </div>
 
-            <div class="bg-blue-300 w-48 pl-12">
+            <div class="bg-blue-300 w-48 pl-12 mt-4">
               <a class="m-4" href="/">Tillbaka</a>
             </div>
           </div>

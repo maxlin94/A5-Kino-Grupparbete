@@ -1,6 +1,6 @@
 class PassWordValidation {
   constructor() {
-    this.setupSubmitListener();
+    // this.setupSubmitListener();
   }
   getPwStrengthText() {
     return document.querySelector("#pwPower");
@@ -33,19 +33,19 @@ class PassWordValidation {
     }
   }
 
-  setupSubmitListener() {
-    this.getSubmitBtn().addEventListener("click", (event) => {
-      const passwordInput = this.getPwInput().value;
-      const passwordStrengthText = this.getPwStrengthText();
-      const regularExpression = /[|#\(\)\[\]{}<>=:;"'&!\-@]/;
+  // setupSubmitListener() {
+  //   this.getSubmitBtn().addEventListener("click", (event) => {
+  //     const passwordInput = this.getPwInput().value;
+  //     const passwordStrengthText = this.getPwStrengthText();
+  //     const regularExpression = /[|#\(\)\[\]{}<>=:;"'&!\-@]/;
 
-      if (passwordInput.length > 8 && passwordInput.match(regularExpression)) {
-      } else if (!passwordInput.match(regularExpression)) {
-        passwordStrengthText.innerText = "Något fattas";
-        passwordStrengthText.style.color = "orange";
-      }
-    });
-  }
+  //     if (passwordInput.length > 8 && passwordInput.match(regularExpression)) {
+  //     } else if (!passwordInput.match(regularExpression)) {
+  //       passwordStrengthText.innerText = "Något fattas";
+  //       passwordStrengthText.style.color = "orange";
+  //     }
+  //   });
+  // }
 
   validationInput() {
     const pwInput = this.getPwInput();
