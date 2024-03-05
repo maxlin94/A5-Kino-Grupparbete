@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+
+    <body class="bg-body">
+        <main class="grid-20-1fr min-h-full w-full bg-primary absolute">
+            <%- include('./partials/sidebar', { active: '/login' }) %> <% if(signIn){%>
+            <div
+                class="flex flex-col justify-center items-center bg-secondary self-center justify-self-center p-16 w-96 rounded-lg"
+            >
+                <h2 class="text-white font-semibold text-2xl text-center">
+                    Vänligen fyll i användarnamn och lösernord
+                </h2>
+                <hr class="border-2 border-solid border-white self-stretch mt-4 mb-4" />
+                <form id="signInForm" name="signInForm" class="flex flex-col gap-4">
+                    <md-outlined-text-field
+                        label="Användarnamn"
+                        name="username"
+                        required
+                    ></md-outlined-text-field>
+                    <md-outlined-text-field
+                        label="Lösernord"
+                        name="password"
+                        id="password"
+                        type="password"
+                        required
+                    ></md-outlined-text-field>
+                    <p class="text-[#cc0000] font-semibold drop-shadow-sm hidden">
+                        *Fel användarnamn eller lösenord. Vänligen försök igen.
+                    </p>
+                    <md-filled-button class="font-bold" type="submit" id="signIn"
+                        >Logga in</md-filled-button
+                    >
+                </form>
+                <h2 class="font-semibold text-white mt-4 mb-2">Har du inget konto?</h2>
+                <a href="/signUp"
+                    ><md-filled-button class="font-bold" type="button" id="signUp"
+                        >Skapa konto</md-filled-button
+                    ></a
+                >
+            </div>
+            <% } %> <% if(signUp){ %>
+            <div
+                class="flex flex-col justify-center items-center bg-secondary self-center justify-self-center p-16 w-96 rounded-lg"
+            >
+                <h2 class="text-white font-semibold text-2xl text-center">
+                    Vänligen fyll i samtliga fält för att skapa ett konto
+                </h2>
+                <hr class="border-2 border-solid border-white self-stretch mt-4 mb-4" />
+                <form id="signUpForm" name="signUpForm" class="flex flex-col gap-4">
+                    <md-outlined-text-field
+                        type="text"
+                        label="Användarnamn"
+                        name="username"
+                        id="username"
+                        required
+                    ></md-outlined-text-field>
+                    <md-outlined-text-field
+                        type="text"
+                        label="Fullständiga namn"
+                        name="name"
+                        id="name"
+                        required
+                    ></md-outlined-text-field>
+                    <p class="text-[#cc0000] font-semibold drop-shadow-sm hidden">
+                        *Detta fält kräver både ditt för och efternamn
+                    </p>
+                    <md-outlined-text-field
+                        label="Lösernord"
+                        id="newPassword"
+                        name="password"
+                        type="password"
+                        required
+                    ></md-outlined-text-field>
+                    <p class="text-[#cc0000] font-semibold drop-shadow-sm hidden">
+                        *För ditt kontos säkerhet behöver ditt lösenord vara mellan 8-15 teckan
+                        varav minst en stor bokstav, ett specialtecken och en siffra
+                    </p>
+                    <md-outlined-text-field
+                        type="email"
+                        label="E-post"
+                        name="email"
+                        id="email"
+                        required
+                    ></md-outlined-text-field>
+                    <p class="text-[#cc0000] font-semibold drop-shadow-sm hidden">
+                        *Vänligen ange en giltig mailadress
+                    </p>
+                    <md-filled-button class="font-bold" type="submit" id="CreateAccount"
+                        >Skapa konto</md-filled-button
+                    >
+                </form>
+                <hr class="border-2 border-solid border-white self-stretch mt-4 mb-4" />
+                <a href="/login"
+                    ><md-filled-button class="font-bold" type="button" id="goBack"
+                        >Tillbaka till logga in</md-filled-button
+                    ></a
+                >
+            </div>
+            <% } %> 
+            <% if(userPage){ %>
+            <div
+                class="flex flex-col justify-center items-center bg-secondary self-center justify-self-center p-16 w-96 rounded-lg"
+            >
+            <h2>Välkommen <br> !</h2>
+          </div>
+            <% } %>
+        </main>
+    </body>
+</html>
