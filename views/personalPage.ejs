@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta lang="sv" />
+  <title>Bihjografen</title>
+  <link
+    href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  />
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="/personalpage.js" type="module" defer></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="/output.css" />
+  <body>
+    <header class="mdc-top-app-bar bg-black">
+      <div class="mdc-top-app-bar__row">
+        <section
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
+        >
+          <button
+            class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
+            aria-label="Open navigation menu"
+          >
+            menu
+          </button>
+          <span class="mdc-top-app-bar__title" id="personalPageSpan"></span>
+        </section>
+        <section
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
+          role="toolbar"
+        >
+          <button
+            class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+            aria-label="Favorite"
+          >
+            favorite
+          </button>
+          <button
+            class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+            aria-label="Search"
+          >
+            search
+          </button>
+          <button
+            class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+            aria-label="Options"
+          >
+            more_vert
+          </button>
+        </section>
+      </div>
+    </header>
+    <main class="mdc-top-app-bar--fixed-adjust bg-red-700 h-screen">
+      App content
+    </main>
+  </body>
+</html>
