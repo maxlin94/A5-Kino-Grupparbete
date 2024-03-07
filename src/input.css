@@ -5,6 +5,12 @@
 :root {
   --bg-primary: #123;
   --bg-secondary: rgb(69, 92, 115);
+  --md-sys-color-primary: var(--bg-primary);
+  --md-sys-color-on-surface: white;
+  --md-sys-color-on-surface-variant: white;
+  --md-sys-color-outline:var(--bg-primary);
+  --md-sys-color-error: rgb(179, 2, 2);
+  --md-outlined-text-field-focus-label-text-color: white;
 }
 
 body {
@@ -15,6 +21,10 @@ body {
   position: relative;
   background-color: var(--bg-primary);
   border-radius: 100vw 0 0 100vw;
+}
+
+.hidden{
+  display: none;
 }
 
 .active ::before,
