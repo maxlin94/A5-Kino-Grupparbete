@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<%- include('./partials/head') %>
+
+<body class="bg-body">
+    <main class="grid-20-1fr min-h-full w-full bg-primary absolute">
+        <%- include('./partials/sidebar', { active: '/login' }) %>
+        <section class="flex flex-col justify-between bg-secondary rounded-md w-1/2 h-1/2 m-auto">
+            <div class="text-left px-10">
+                <h1 class="text-white text-3xl my-4 text-center">Profil</h1>
+                <p class="text-white text-lg font-semibold">Namn: <%= user.name || 'Ej angivet' %></p>
+                <p class="text-white text-lg font-semibold">Efternamn: <%= user.lastname || 'Ej angivet' %></p>
+                <p class="text-white text-lg font-semibold">E-mail: <%= user.email %></p>
+                <p class="text-white text-lg font-semibold">Address: <%= user.address || 'Ej angivet' %></p>
+                <p class="text-white text-lg font-semibold">Telefonnummer: <%= user.phonenumber || 'Ej angivet' %></p>
+            </div>
+            <div class="flex justify-around w-full">
+                <button class="text-white bg-primary font-bold rounded-md py-2 px-4 my-6 hover:opacity-80">Ändra uppgifter</button>
+                <a class="signout text-white bg-primary font-bold rounded-md py-2 px-4 my-6 hover:opacity-80" href="/logout">Logga ut</a>
+            </div>
+    </main>
+</body>
+</html>
