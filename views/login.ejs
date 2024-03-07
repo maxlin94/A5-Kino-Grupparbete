@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<%- include('./partials/head') %>
+
+<body class="bg-body">
+    <main class="grid-20-1fr min-h-full w-full bg-primary absolute">
+        <%- include('./partials/sidebar', { active: '/login' }) %>
+        <section class="flex flex-col justify-center items-center">
+            <form class="flex flex-col items-center" action="/login" method="POST">
+                    <input class="p-2 my-2 rounded-md" type="email" id="email" name="email" placeholder="E-email" required>
+                    <input class="p-2 my-2 rounded-md" type="password" id="password" name="password" placeholder="Lösenord" required>
+                    <% if(messages.error) { %>
+                        <p class="text-red-500 text-s italic"><%= messages.error %></p>
+                    <% } %>
+                    <% if(messages.success) { %>
+                            <p class="text-green-500 text-s italic"><%= messages.success %></p>
+                    <% } %>
+                    <button class="bg-secondary px-2 py-1 mt-2 text-white text-xl font-semibold rounded-md hover:opacity-80" type="submit">Logga in</button>
+            </form>
+            <p class="text-white text-xl mt-6 mb-2">Inget konto?</p>
+            <a class="text-white font-semibold hover:opacity-80" href="/register">Registrera dig här</a>
+        </section>
+    </main>
+</body>
+
+</html>
