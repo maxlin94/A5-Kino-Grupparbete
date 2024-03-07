@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta lang="sv" />
+    <title>Bihjografen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="../Login.js" type="module" defer></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="/output.css" />
+  </head>
+
+  <body>
+    <main class="grid-20-1fr min-h-full w-full bg-primary absolute flex">
+      <aside class="bg-secondary sticky top-0 max-h-screen">
+        <img
+          class="p-4 mb-10"
+          src="../bihjografenlogo.png"
+          alt="Bihjografenlogo"
+        />
+        <ul class="flex flex-col gap-20 pl-4 text-white text-3xl font-bold">
+          <li class="px-8 py-4 ml-4 'active' : '' %>">
+            <a href="http://localhost:5080/">Hem</a>
+          </li>
+          <li class="px-8 py-4 ml-4 'active' : '' %>">
+            <a href="http://localhost:5080/movies">Filmer</a>
+          </li>
+          <li class="px-8 py-4 ml-4 'active' : '' %>">
+            <a href="http://localhost:5080/about">Om oss</a>
+          </li>
+          <li class="px-8 py-4 ml-4 'active' : '' %>">
+            <a href="http://localhost:5080/createaccount">Bli medlem</a>
+          </li>
+          <li class="px-8 py-4 ml-4 'active' : '' %>">
+            <a href="http://localhost:5080/login.html">Logga in</a>
+          </li>
+        </ul>
+      </aside>
+
+      <section
+        class="flex items-center flex-col bg-secondary rounded gap-10 h-3/5 mt-16 w-96 self-center justify-center justify-self-center"
+      >
+        <h1 class="text-6xl font-bold text-white m-2">Logga in</h1>
+        <form
+          action="http://localhost:5080/createaccount/personalpage"
+          method=""
+          class="border-2 rounded-lg py-5 h-3/5"
+          id="userFormLogin"
+        >
+          <div class="flex flex-col gap-1 mx-3 p-3">
+            <label for="userNameAccLogin" class="text-white"
+              >Användarnamn</label
+            >
+            <input
+              type="text"
+              name="userName"
+              id="userNameAccLogin"
+              placeholder="Användarnamn*"
+              required
+            />
+            <label for="passwordAcc" class="text-white">Lösenord</label>
+            <input
+              type="password"
+              name="password"
+              id="passwordLogin"
+              placeholder="Ditt lösenord*"
+              required
+            />
+
+            <div class="bg-blue-300 w-48 pl-12 mt-4">
+              <input
+                type="submit"
+                value="Logga in"
+                class="ml-4 cursor-pointer"
+                id="LoginBtn"
+              />
+            </div>
+
+            <div class="bg-blue-300 w-48 pl-12 mt-4">
+              <a class="m-4" href="/">Tillbaka</a>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

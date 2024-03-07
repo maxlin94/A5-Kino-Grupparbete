@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta lang="sv" />
+  <title>Bihjografen</title>
+  <link
+    href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+    rel="stylesheet"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  />
+  <link
+    rel="stylesheet"
+    href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"
+  />
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="/personalpage.js" type="module" defer></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="/output.css" />
+  <body>
+    <header class="mdc-top-app-bar bg-red-700">
+      <div class="mdc-top-app-bar__row">
+        <section
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
+        >
+          <button
+            class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
+            aria-label="Open navigation menu"
+          >
+            menu
+          </button>
+          <span
+            class="mdc-top-app-bar__title text-amber-400"
+            id="personalPageSpan"
+          ></span>
+          <div class="flex gap-10 ml-12">
+            <a href="http://localhost:5080/">
+              <button
+                class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect text-amber-400"
+              >
+                Startsida
+              </button>
+            </a>
+            <a href="http://localhost:5080/movies">
+              <button
+                class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect text-amber-400"
+              >
+                Filmer
+              </button>
+            </a>
+          </div>
+        </section>
+        <section
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
+          role="toolbar"
+        >
+          <div
+            class="material-icons mdl-badge mdl-badge--overlap cursor-pointer"
+            data-badge="5"
+          >
+            account_box
+          </div>
+          <button
+            class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+            aria-label="Favorite"
+          >
+            favorite
+          </button>
+          <button
+            class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+            aria-label="Search"
+          >
+            search
+          </button>
+          <button
+            class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+            aria-label="Options"
+          >
+            more_vert
+          </button>
+        </section>
+      </div>
+    </header>
+    <main
+      class="mdc-top-app-bar--fixed-adjust bg-black h-screen flex justify-center"
+    >
+      <div
+        class="demo-card-square mdl-card mdl-shadow--2dp bg-red-700 h-96 mt-24 border-yellow-400 border-2"
+      >
+        <div>
+          <img src="../bihjografenlogo.png" alt="" class="w-48 h-48 ml-20" />
+        </div>
+        <div class="mdl-card__title mdl-card--expand">
+          <h2 class="mdl-card__title-text text-amber-400">Guldmedlem!</h2>
+        </div>
+
+        <div class="mdl-card__supporting-text text-amber-400">
+          Som guldmedlem får du bonusar, rabatter och exklusiva visningar.
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a
+            class="mdl-button mdl-js-button mdl-js-ripple-effect text-amber-400"
+          >
+            Se dina exklusiva förmåner.
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="mdl-mega-footer bg-red-700 text-amber-400">
+      <div class="mdl-mega-footer__middle-section">
+        <div class="mdl-mega-footer__drop-down-section">
+          <input
+            class="mdl-mega-footer__heading-checkbox"
+            type="checkbox"
+            checked
+          />
+          <h1 class="mdl-mega-footer__heading text-amber-400">Bihjografen</h1>
+          <ul class="mdl-mega-footer__link-list">
+            <li><a href="http://localhost:5080/about">Om oss</a></li>
+            <li><a href="#">Partners</a></li>
+            <li><a href="#">Nyheter</a></li>
+          </ul>
+        </div>
+
+        <div class="mdl-mega-footer__drop-down-section">
+          <input
+            class="mdl-mega-footer__heading-checkbox"
+            type="checkbox"
+            checked
+          />
+          <h1 class="mdl-mega-footer__heading text-amber-400">
+            Tillgänglighet
+          </h1>
+          <ul class="mdl-mega-footer__link-list">
+            <li><a href="#">Rullstolar</a></li>
+            <li><a href="#">Syntolkning</a></li>
+            <li><a href="#"></a>Punktskrift-manus</li>
+          </ul>
+        </div>
+
+        <div class="mdl-mega-footer__drop-down-section">
+          <input
+            class="mdl-mega-footer__heading-checkbox"
+            type="checkbox"
+            checked
+          />
+          <h1 class="mdl-mega-footer__heading text-amber-400">
+            Vart finns vi?
+          </h1>
+          <ul class="mdl-mega-footer__link-list">
+            <li><a href="#">Bihjografen - Jovägen 3 60137-Hjo</a></li>
+            <li><a href="#">Huvudkontoret - Park Avenue 3 - Los Angeles</a></li>
+          </ul>
+        </div>
+
+        <div class="mdl-mega-footer__drop-down-section">
+          <input
+            class="mdl-mega-footer__heading-checkbox"
+            type="checkbox"
+            checked
+          />
+          <h1 class="mdl-mega-footer__heading text-amber-400">FAQ</h1>
+          <ul class="mdl-mega-footer__link-list">
+            <li><a href="#">Email</a></li>
+            <li><a href="#">Produkter</a></li>
+            <li><a href="#">Evenemang</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
