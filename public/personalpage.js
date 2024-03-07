@@ -6,7 +6,7 @@ class PersonalPage {
 
   changeSpan() {
     this.userName = sessionStorage.getItem("Username");
-    this.span().innerText = `Välkommen ${this.userName}!`;
+    this.span().innerText = `Välkommen till din personliga Bihjograf-sida ${this.userName}!`;
   }
 }
 
