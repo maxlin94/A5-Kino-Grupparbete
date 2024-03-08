@@ -2,6 +2,7 @@ const submitButton = document.querySelector("#button");
 const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
 const form = document.querySelector("#form");
+const passwordIndicator = document.querySelector("#passwordIndicator");
 
 const validateEmail = (email) => {
     return email
@@ -29,11 +30,18 @@ const strongPassword = (password) => {
 }
 
 passwordInput.addEventListener("input", () => {
-    if (strongPassword(passwordInput.value) == null) {
+    if  (passwordInput.value == ""){
+        passwordInput.style.border = "none";
+        passwordIndicator.innerText = "";
+    }
+        
+    else if (strongPassword(passwordInput.value) == null){
         passwordInput.style.border = "2px solid red";
+        passwordIndicator.innerText = "Svagt lösenord";
     }
     else {
         passwordInput.style.border = "2px solid #00cc00";
+        passwordIndicator.innerText = "Starkt lösenord";
     }
 
 });
