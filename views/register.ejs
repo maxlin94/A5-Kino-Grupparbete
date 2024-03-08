@@ -7,26 +7,37 @@
     <main class="grid-20-1fr min-h-full w-full bg-primary absolute">
         <%- include('./partials/sidebar', { active: '/login' }) %>
         <section class="flex flex-col justify-center items-center">
-            <h1 class="text-white text-2xl">Skapa konto</h1>
-            <form class="flex flex-col items-center" action="/register" method="POST">
-                <input class="p-2 my-2 rounded-md" type="text" id="name" name="name" placeholder="Namn" required>
-                <input class="p-2 my-2 rounded-md" type="text" id="lastname" name="lastname" placeholder="Efternamn" required>
+            <h1 class="text-white text-3xl mb-8">Skapa konto</h1>
+            <form id="form-register" class="flex flex-col" action="/register" method="POST">
+                <div class="flex items-center gap-2">
+                    <div class="flex flex-col">
+                        <label class="text-white" for="name">Namn</label>
+                        <input class="p-2 my-2 rounded-md" type="text" id="name" name="name" placeholder="Namn" required>
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="text-white" for="lastname">Efternamn</label>
+                        <input class="p-2 my-2 rounded-md" type="text" id="lastname" name="lastname" placeholder="Efternamn" required>
+                    </div>
+                </div>  
+                <label class="text-white" for="email">E-postaddress</label>
                 <input class="p-2 my-2 rounded-md" type="email" id="email" name="email" placeholder="E-postaddress" required>
+                <label class="text-white" for="password">Lösenord</label>
                 <input class="p-2 my-2 rounded-md" type="password" id="password" name="password" placeholder="Lösenord" required>
                 <div id="password-strength" class="hidden">
                     <div></div>
                     <div></div>
                     <div></div>
                 </div>
-                <input class="p-2 my-2 rounded-md" type="password" id="password2" name="password2" placeholder="Bekräfta lösenord" required>
-                <% if(messages.error) { %>
-                <p class="text-red-500"><%= messages.error %></p>
-                <% } %>
-                <div id="error"></div>
+                <label class="text-white" for="password2">Bekräfta lösenord</label>
+                <input class="p-2 my-2 rounded-md" type="password" id="password2" placeholder="Bekräfta lösenord" required>
                 <button id="submit" class="bg-secondary px-2 py-1 mt-2 text-white text-xl font-semibold rounded-md hover:opacity-80" type="submit">Skapa konto</button>
             </form>
+            <% if(messages.error) { %>
+            <p class="text-red-500 mt-2 ml-2 text-center"><%= messages.error %></p>
+            <% } %>
+            <div id="error"></div>
             <p class="text-white text-xl mt-6 mb-2">Har du redan ett konto?</p>
-            <a class="text-white font-semibold hover:opacity-80" href="/login">Logga in här</a>
+            <a class="text-white font-semibold underline hover:opacity-80" href="/login">Logga in</a>
     </main>
 </body>
     <script src="register.js" defer></script>
